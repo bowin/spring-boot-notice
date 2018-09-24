@@ -2,7 +2,7 @@
 spring boot 项目整理
 
 ## 典型的spring boot
-spring-boot 简化了使用spring web web开发的开发配置, maven提供了spring-boot-maven-plugin，直接通过java -jar 直接启动
+spring-boot 简化了使用spring web开发的开发配置, maven提供了spring-boot-maven-plugin，生成jar可以通过java -jar 直接启动
 典型的pom如下:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
