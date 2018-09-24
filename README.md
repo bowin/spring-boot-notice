@@ -126,6 +126,7 @@ spring-boot 简化了使用spring web web开发的开发配置, maven提供了sp
 
 
 </project>
+```
 
 主函数
 
@@ -148,8 +149,34 @@ public class HuifuDemoApplication {
 ```xml
 -    <packaging>jar</packaging>
 +    <packaging>war</packaging>
-+    <groupId>org.springframework.boot</groupId>
-+    <artifactId>spring-boot-starter-tomcat</artifactId>
-+    <scope>provided</scope>
++    <dependency>
++        <groupId>org.springframework.boot</groupId>
++        <artifactId>spring-boot-starter-tomcat</artifactId>
++        <scope>provided</scope>
++    </dependency>
 
+```
+主函数
+```java
+package com.eglass.huifu_demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+@SpringBootApplication
+//@EnableEurekaClient
+public class HuifuDemoApplication extends SpringBootServletInitializer {
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(HuifuDemoApplication.class);
+    }
+
+
+    public static void main(String[] args) {
+        SpringApplication.run(HuifuDemoApplication.class, args);
+    }
+}
 ```
