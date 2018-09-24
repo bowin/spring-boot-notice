@@ -1,5 +1,5 @@
 # spring-boot-notice
-记录spring boot 小知识点
+spring boot 项目整理
 
 ## 典型的spring boot
 spring-boot 简化了使用spring web web开发的开发配置, maven提供了spring-boot-maven-plugin，直接通过java -jar 直接启动
